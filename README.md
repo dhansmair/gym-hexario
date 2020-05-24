@@ -19,3 +19,47 @@ pip3 install .
 
 ```
 
+### code example
+```
+import gym
+import gym_hexario
+
+# create an environment
+n_agents = 2
+env = gym.make('Hexario-v0', n_agents=n_agents)
+
+for _ in range(100):
+
+    env.reset('all')
+    dones = [False] * n_agents
+
+    while False in dones:
+        env.render()
+
+        actions = [env.action_space.sample() for _ in range(n_agents)]
+        states, rewards, dones, infos = env.step(actions)
+
+    print('finished episode')
+```
+
+### configuration
+The environment can be configured through various optional arguments for the gym.make(...) function.  
+```
+kwargs={
+    'n_agents': 1,
+    'map_radius': 20,
+    'max_steps': 500,
+    'perspective': 'local',
+    'observation_space': 'features',
+    'observation_radius': 8,
+    'action_space': 'discrete',
+    'reward_timestep': 0.0,
+    'reward_capture': 1.0,
+    'reward_claim': 0.0,
+    'reward_kill': 100.0
+}
+
+env = gym.make('Hexario-v0', **kwargs)
+
+# ...
+```
