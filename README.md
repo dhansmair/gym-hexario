@@ -24,10 +24,11 @@ pip3 install .
 import gym
 import gym_hexario
 
-# create an environment
+# create the environment
 n_agents = 2
 env = gym.make('Hexario-v0', n_agents=n_agents)
 
+# run 100 episodes with random actions
 for _ in range(100):
 
     env.reset('all')
