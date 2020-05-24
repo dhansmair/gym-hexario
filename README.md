@@ -48,12 +48,12 @@ The environment can be configured through various optional arguments for the gym
 ```
 kwargs={
     'n_agents': 1,
-    'map_radius': 20,
+    'map_radius': 20,                   # size of the board
     'max_steps': 500,
-    'perspective': 'local',
-    'observation_space': 'features',
+    'perspective': 'local',             # 'local' | 'global'
+    'observation_space': 'features',    # 'features' | 'pixels'
     'observation_radius': 8,
-    'action_space': 'discrete',
+    'action_space': 'discrete',         # 'discrete' | 'continuous'
     'reward_timestep': 0.0,
     'reward_capture': 1.0,
     'reward_claim': 0.0,
