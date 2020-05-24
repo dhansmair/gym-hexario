@@ -1,0 +1,11 @@
+SDL2_gfx extends SDL2 with methods to draw more complex
+geometric shapes like polygons. SDL2 itself only contains 
+methods to draw circles, rectangles etc.
+
+These are only the files I require from SDL2_gfx,
+the original sources can be found at 
+http://www.ferzkopp.net/wordpress/2016/01/02/sdl_gfx-sdl2_gfx/
+
+SDL2_gfxPrimitives.c is slightly changed so I do not 
+need to also include SDL2_rotozoom.c / .h
+
